@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Zen Dots', cursive;
+}
+:root{
+    --back-color: #fff7ec;
+    --box-color: #fac7c3;
+    --border-color: #a9e2f5;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    background-color: var(--back-color);
+}
+.text-part{
+    margin-top: 6rem;
+}
+.heading{
+    margin-top: 3.5rem;
+    text-align: center;
+    font-size: 2.5rem;
+}
+.para{
+    text-align: center;
+    margin-top: 1.6rem;
+    font-size: 1.3rem;
+}
+.key{
+    height: 7rem;
+    background-color: var(--box-color);
+    width: 7rem;
+    text-align: center;
+    padding-top: 1rem;
+    
+}
+.key kbd{
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+   
+}
+.sound{
+    margin-top: 1rem;
+}
+.keys{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 0 11rem 0 11rem;
+    margin-top: 25rem;
+    transition: all 0.07s;
+}
+.playing{
+    transform: scale(1.1);
+    border: 4px var(--border-color) solid;
+    box-shadow: 0 0 10px var(--border-color);
+}
+
+/* Responsivenes*/
+@media(max-width:780px){
+    .key{
+        height: 8rem;
+        width: 15rem;
+    }
+    .keys{
+        gap: 2rem;
+        padding: 0 4rem 0 4rem;
+    }
+} 
+
+@media(max-width:480px){
+    .keys{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        padding: 0 3rem 0 5rem;
+        column-gap: 2rem;
+        margin-bottom: 3rem;
+    }
+    .key{
+        width: 8rem;
+    }
+}
+@media(max-width:360px){
+    .heading{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .para{
+        text-align: center;
+        font-size: 1rem;
+    }
+    .keys{
+        padding: 0 2rem 0 3rem;
+    }
+    .key{
+        width: 7rem;
+    }
+}
+@media(max-width:240px){
+    .heading{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .para{
+        text-align: center;
+        font-size: 0.7rem;
+    }
+    .keys{
+        grid-template-columns: repeat(2,1fr);
+        margin-top: 10rem;
+    }
+}
